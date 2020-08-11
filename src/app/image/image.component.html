@@ -1,0 +1,17 @@
+<div class="body">
+  <div class="container">
+    <div class="table">
+      <table>
+        <tr *ngFor="let i of arr(height).fill(1) let row = index">
+          <td *ngFor="let j of arr(width).fill(1) let col = index">
+            <a (mouseover)="$event.buttons === 1 ? draw(row, col) : null"
+               (mousedown)="draw(row, col)"
+                class="{{image[row][col] === 0 ? 'inactive' : 'active'}}"></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <button mat-raised-button
+    class="rippleButton">Reset drawing</button>
+</div>

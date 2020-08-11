@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-mnist"
+    }
+  },
+  "defaultProject": "angular-mnist",
+  "cli": {
+    "analytics": "ac87fbeb-b873-4a6d-8ca5-23547ca1cc28"
+  }
 }

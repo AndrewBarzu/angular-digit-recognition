@@ -1,0 +1,60 @@
+table{
+  border: 1px solid black;
+  table-layout: auto;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 60px;
+  width: 10px;
+  height: 15px;
+  position: relative;
+}
+
+td a, td span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+}
+
+.active{
+  background-color: black;
+}
+
+.inactive{
+  background-color: white;
+}
+
+.container{
+  display: flex;
+  height: 62%;
+  width: 100%;
+}
+
+.table{
+  margin: 0 auto;
+}
+
+.body {
+  text-align: center;
+}
+
+.rippleButton {
+  margin-top: 20px;
+  background-position: center;
+  background: lightblue;
+  transition: background 0.8s;
+}
+.rippleButton:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.rippleButton:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
