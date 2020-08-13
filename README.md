@@ -8,4 +8,4 @@ The application uses a table as a canvas to draw the digits. After and image is 
 
 ## Backend Neural Network
 
-The Neural Network is a Fully Connected Neural Network, and because of that it has a pretty bad accuracy on new examples of digits. I may try using a canvas and compressing the image to get higher variance in the sent image, rather than an image with either black or white, but for that i'll need to figure out a way to send large data over to api's and a way to use the html canvas in typescript.
+The Neural Network is a Fully Connected Neural Network, and because of that it has a pretty bad accuracy on new examples of digits, I'd rate it a 60 or 70% on a good day. I may try using a canvas and compressing the image to get higher variance in the sent image, rather than an image with either black or white, but for that i'll need to figure out a way to send large data over to api's and a way to use the html canvas in typescript.
