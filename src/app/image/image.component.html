@@ -1,21 +1,26 @@
 <div class="container">
   <div class="table">
-    <table>
-      <tr *ngFor="let i of arr(height).fill(1) let row = index">
-        <td *ngFor="let j of arr(width).fill(1) let col = index">
-          <a (mousemove)="$event.buttons === 1 ? draw(row, col) : null"
-              class="{{image[row][col] === 0 ? 'inactive' : 'active'}}"></a>
-        </td>
-      </tr>
-    </table>
+<!--    <table>-->
+<!--      <tr *ngFor="let i of arr(height).fill(1) let row = index">-->
+<!--        <td *ngFor="let j of arr(width).fill(1) let col = index">-->
+<!--          <a (mousemove)="$event.buttons === 1 ? draw(row, col) : null"-->
+<!--              class="{{image[row][col] === 0 ? 'inactive' : 'active'}}"></a>-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--    </table>-->
+    <canvas id="canvas" width="490" height="490"
+            style="border: 1px solid black;">
+    </canvas>
     <div class="button_container">
       <button mat-raised-button
-            (click)="reset()">Reset drawing</button>
-      <button mat-raised-button
-              (click)="change_mode()">{{capitalise(mode)}}</button>
+            (click)="clearCanvas()">Reset drawing</button>
       <button mat-raised-button
               (click)="send()">Predict</button>
     </div>
   </div>
 </div>
 <p>Prediction: {{prediction}}</p>
+<canvas id="canvas2" width="20" height="20"
+        style="border: 1px solid black;">
+
+</canvas>

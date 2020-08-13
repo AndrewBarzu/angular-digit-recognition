@@ -9,8 +9,8 @@ export class NetworkService {
 
   constructor(private http: HttpClient) { }
   predict(image): Observable<any>{
-    return this.http.get('https://python-digit-recognition.herokuapp.com/prediction', {
-      params: new HttpParams().set('image', image.toString()),
+    return this.http.get('http://127.0.0.1:5000/prediction', {
+      params: new HttpParams().set('image', image),
     });
   }
 }
