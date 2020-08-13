@@ -160,9 +160,6 @@ export class ImageComponent implements OnInit {
         const R = 255 - rawData[i];
         const G = 255 - rawData[i + 1];
         const B = 255 - rawData[i + 2];
-        if (R !== 0 || G !== 0 || B !== 0){
-          console.log(R, G, B);
-        }
         image[i / 4] = (R + G + B) / (255 * 3);
     }
     this.service.predict(image)
