@@ -165,7 +165,6 @@ export class ImageComponent implements OnInit {
         }
         image[i / 4] = (R + G + B) / (255 * 3);
     }
-    console.log(image);
     this.service.predict(image)
       .subscribe((data: any) => this.prediction = data);
   }
