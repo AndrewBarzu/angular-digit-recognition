@@ -1,27 +1,11 @@
-# AngularMnist
+# Angular digit recognition web app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
+This is my implementation of a digit recognition application in angular. You can try it out on this link: https://andrewbarzu.github.io/angular-digit-recognition/
 
-## Development server
+## Implementation details
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The application uses a table as a canvas to draw the digits. After and image is drawn and the "Predict" button is pressed, the image is sent to a heroku api written in python with flask, to be processed by a neural network and to return the prediction. The said api is also on github, on this page: https://github.com/AndrewBarzu/PythonBackendDigitRecognition
 
-## Code scaffolding
+## Backend Neural Network
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The Neural Network is a Fully Connected Neural Network, and because of that it has a pretty bad accuracy on new examples of digits, I'd rate it a 60 or 70% on a good day. I may try using a canvas and compressing the image to get higher variance in the sent image, rather than an image with either black or white, but for that i'll need to figure out a way to send large data over to api's and a way to use the html canvas in typescript.
